@@ -36,7 +36,6 @@ export async function bundle(root: string) {
     spinner.succeed('Build client + server bundles success!');
     return [clientBundle, serverBundle] as [RollupOutput, RollupOutput];
   } catch (e) {
-
     spinner.fail('Build client + server bundles failed!');
     console.log(e);
   }
