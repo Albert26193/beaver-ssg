@@ -6,21 +6,26 @@
   "scripts": {
     "start": "tsup --watch",
     "build": "tsup",
-    "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx ./"
+    "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx ./",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/fs-extra": "^11.0.2",
     "@types/node": "^20.6.5",
     "@types/rollup": "^0.54.0",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
+    "commitlint": "^17.7.2",
     "eslint": "^8.51.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "fs-extra": "^11.1.1",
+    "husky": "^8.0.3",
     "ora": "^7.0.1",
     "rollup": "^3.29.4",
     "tsup": "^7.2.0",
