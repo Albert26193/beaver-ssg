@@ -6,19 +6,19 @@ export function pluginIndexHtml(): Plugin {
   return {
     name: 'beaver:index-html',
     apply: 'serve',
-     transformIndexHtml(html) {
+    transformIndexHtml(html) {
       return {
         html,
         tags: [
           {
-            tag: "script",
+            tag: 'script',
             attrs: {
-              type: "module",
-              src: `/@fs/${CLIENT_ENTRY_PATH}`,
+              type: 'module',
+              src: `/@fs/${CLIENT_ENTRY_PATH}`
             },
-            injectTo: "body",
-          },
-        ],
+            injectTo: 'body'
+          }
+        ]
       };
     },
     configureServer(server) {
@@ -36,6 +36,6 @@ export function pluginIndexHtml(): Plugin {
           }
         });
       };
-    },
+    }
   };
 }
