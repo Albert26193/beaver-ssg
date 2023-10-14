@@ -1,9 +1,10 @@
-import { UserConfig } from '../shared/types/index';
 import { resolve } from 'path';
 import fs from 'fs-extra';
 import { loadConfigFromFile } from 'vite';
+import { SiteConfig, UserConfig } from '../shared/types/index';
 
 type RawConfig = UserConfig | Promise<UserConfig> | (() => UserConfig | Promise<UserConfig>);
+
 function getUserConfigPath(root: string) {
   try {
     const supportConfigFiles = ['config.ts', 'config.js'];
@@ -40,13 +41,27 @@ export async function resolveUserConfig(
   }
 }
 
+export function resolveSiteData(userConfig: UserConfig): UserConfig {
+  return {
+    title: userConfig.title || 'Beaver.js',
+    description: userConfig.description || 'SSG Framework',
+    themeConfig: userConfig.themeConfig || {},
+    vite: userConfig.vite || {}
+  };
+}
+
 export async function resolveConfig(
   root: string,
   command: 'serve' | 'build',
   mode: 'development' | 'production'
-) {
-  const [userConfigPath, userConfig] = await resolveUserConfig(root, command, mode);
-  console.log(userConfig);
+): Promise<SiteConfig> {
+  const [configPath, userConfig] = await resolveUserConfig(root, command, mode);
+  const siteConfig: SiteConfig = {
+    root,
+    configPath: configPath,
+    siteData: resolveSiteData(userConfig as UserConfig)
+  };
+  return siteConfig;
 }
 
 export function defineConfig(config: UserConfig) {

@@ -1,3 +1,6 @@
-export default {
-  a : 1
-}
+// docs/config.ts
+import { defineConfig } from '../dist';
+
+export default defineConfig({
+  title: '123'
+});
