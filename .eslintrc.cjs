@@ -16,11 +16,13 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
   rules: {
+    "no-unused-vars": "off",
     'prettier/prettier': 'error',
+    "@typescript-eslint/no-unused-vars": "off",
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     '@typescript-eslint/no-non-null-assertion': 'off',
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
   },
   settings: {
     react: {
