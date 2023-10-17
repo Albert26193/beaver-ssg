@@ -3,3 +3,8 @@ declare module 'beaver:site-data' {
   const siteData: UserConfig;
   export default siteData;
 }
+
+declare module 'beaver:routes' {
+  import type { Route } from 'node/plugin-routes';
+  export const routes: Route[];
+}

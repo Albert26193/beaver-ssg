@@ -7,12 +7,13 @@ import fs from 'fs-extra';
 import { pluginConfig } from './plugin-beaver/config';
 import { SiteConfig } from 'shared/types';
 import pluginReact from '@vitejs/plugin-react';
+import { createVitePlugins } from './vitePlugins';
 
 export async function bundle(root: string, config: SiteConfig) {
   const resolveViteConfig = (isServer: boolean): InlineConfig => ({
     mode: 'production',
     root,
-    plugins: [pluginReact(), pluginConfig(config)],
+    plugins: createVitePlugins(config),
     ssr: {
       noExternal: ['react-router-dom']
     },
