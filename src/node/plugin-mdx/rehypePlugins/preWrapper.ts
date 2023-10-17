@@ -1,23 +1,21 @@
 import type { Plugin } from 'unified';
 import { visit } from 'unist-util-visit';
-import type { Element, Root } from 'hast';
+import type { Element, Root, ElementData } from 'hast';
 
-interface ExtendedElement extends Element {
-  data?: {
-    isVisited?: boolean;
-  };
+interface ExtendElementData extends ElementData {
+  isVisited?: boolean;
 }
 
 export const rehypePluginPreWrapper: Plugin<[], Root> = () => {
   return (tree) => {
-    visit(tree, 'element', (node: ExtendedElement) => {
+    visit(tree, 'element', (node) => {
       // <pre><code>...</code></pre>
       // 1. 找到 pre 元素
       if (
         node.tagName === 'pre' &&
         node.children[0]?.type === 'element' &&
         node.children[0].tagName === 'code' &&
-        node.data?.isVisited !== true
+        (node.data as ExtendElementData)?.isVisited !== true
       ) {
         console.log(node.tagName);
         const codeNode = node.children[0];
@@ -34,7 +32,7 @@ export const rehypePluginPreWrapper: Plugin<[], Root> = () => {
           properties: null,
           data: {
             isVisited: true
-          }
+          } as ExtendElementData
         };
 
         // 修改原来的 pre 标签 -> div 标签
