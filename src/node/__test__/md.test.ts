@@ -4,14 +4,19 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import { rehypePluginPreWrapper } from '../plugin-mdx/rehypePlugins/preWrapper';
+import { rehypePluginShiki } from '../../node/plugin-mdx/rehypePlugins/shiki';
+import shiki from 'shiki';
 
-describe('Markdown compile cases', () => {
+describe('Markdown compile cases', async () => {
   // 初始化 processor
   const processor = unified()
     .use(remarkParse)
     .use(remarkRehype)
-    .use(rehypeStringify)
-    .use(rehypePluginPreWrapper);
+    .use(rehypePluginPreWrapper)
+    .use(rehypePluginShiki, {
+      highlighter: await shiki.getHighlighter({ theme: 'nord' })
+    })
+    .use(rehypeStringify);
 
   test('Compile title', async () => {
     const mdContent = '# 123';
