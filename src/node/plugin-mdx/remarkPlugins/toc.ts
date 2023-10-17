@@ -1,7 +1,7 @@
 import type { Plugin } from 'unified';
 import Slugger from 'github-slugger';
 import { visit } from 'unist-util-visit';
-import { Root } from 'hast';
+import { Root } from 'mdast';
 import type { MdxjsEsm } from 'mdast-util-mdxjs-esm';
 import { parse } from 'acorn';
 
@@ -19,20 +19,21 @@ interface ChildNode {
   children?: ChildNode[];
 }
 
-interface HeadingNode {
-  type: 'heading';
-  depth: number;
-  children: ChildNode[];
-}
+// interface HeadingNode {
+//   type: 'heading';
+//   depth: number;
+//   children: ChildNode[];
+// }
 
 export const remarkPluginToc: Plugin<[], Root> = () => {
   return (tree) => {
     const toc: TocItem[] = [];
-    visit(tree, 'heading', (node: HeadingNode) => {
+    visit(tree, 'heading', (node) => {
       if (!node.depth || !node.children) {
         return;
       }
       // h2 ~ h4
+
       if (node.depth > 1 && node.depth < 5) {
         // node.children 是一个数组，包含几种情况:
         // 1. 文本节点，如 '## title'
@@ -78,8 +79,6 @@ export const remarkPluginToc: Plugin<[], Root> = () => {
     });
 
     const insertCode = `export const toc = ${JSON.stringify(toc, null, 2)};`;
-    console.log(insertCode);
-    console.log(toc);
     tree.children.push({
       type: 'mdxjsEsm',
       value: insertCode,

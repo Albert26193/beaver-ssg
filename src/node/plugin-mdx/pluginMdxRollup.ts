@@ -15,7 +15,8 @@ export async function pluginMdxRollup(): Promise<Plugin> {
     remarkPlugins: [
       remarkPluginGFM,
       remarkPluginFrontmatter,
-      [remarkPluginMDXFrontMatter, { name: 'frontmatter' }]
+      [remarkPluginMDXFrontMatter, { name: 'frontmatter' }],
+      remarkPluginToc as unknown
     ],
     rehypePlugins: [
       rehypePluginSlug,
@@ -32,8 +33,7 @@ export async function pluginMdxRollup(): Promise<Plugin> {
         }
       ],
       rehypePluginPreWrapper as unknown,
-      [rehypePluginShiki, { highlighter: await shiki.getHighlighter({ theme: 'nord' }) }],
-      remarkPluginToc
+      [rehypePluginShiki, { highlighter: await shiki.getHighlighter({ theme: 'nord' }) }]
     ]
   }) as unknown as Plugin;
 }
