@@ -27,9 +27,9 @@ describe('Markdown compile cases', async () => {
   });
 
   test('Compile code', async () => {
-    const mdContent = 'I am using `Island.js`';
+    const mdContent = 'I am using `beaver.js`';
     const result = processor.processSync(mdContent);
-    expect(result.value).toMatchInlineSnapshot('"<p>I am using <code>Island.js</code></p>"');
+    expect(result.value).toMatchInlineSnapshot('"<p>I am using <code>Beaver.js</code></p>"');
   });
 
   test('Compile code block', async () => {
@@ -46,7 +46,7 @@ describe('Markdown compile cases', async () => {
 
 ## h2 \`code\`
 
-### h3 [link](https://islandjs.dev)
+### h3 [link](https://beaver.dev)
 
 #### h4
 
