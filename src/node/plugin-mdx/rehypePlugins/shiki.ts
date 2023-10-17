@@ -18,7 +18,7 @@ export const rehypePluginShiki: Plugin<[Options], Root> = ({ highlighter }) => {
         node.children[0].tagName === 'code'
       ) {
         const codeNode = node.children[0];
-        console.log(codeNode);
+        // console.log(codeNode);
         const codeContent = (codeNode.children[0] as Text).value;
         const codeClassName = codeNode.properties?.className?.toString() || '';
 
