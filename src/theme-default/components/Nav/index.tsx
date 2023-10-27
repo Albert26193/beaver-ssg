@@ -1,6 +1,7 @@
 import styles from './index.module.scss';
 import { NavItemWithLink } from 'shared/types';
 import { usePageData } from '@runtime';
+import { SwitchAppearance } from '../SwitchAppearance';
 
 export function MenuItem(item: NavItemWithLink) {
   return (
@@ -49,7 +50,9 @@ export function Nav() {
               />
             ))}
           </div>
-
+          <div flex="~">
+            <SwitchAppearance />
+          </div>
           <div
             className={styles.socialLinkIcon}
             ml="2"
