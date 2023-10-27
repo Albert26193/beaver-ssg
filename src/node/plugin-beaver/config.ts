@@ -16,6 +16,11 @@ export function pluginConfig(config: SiteConfig, restartServer?: () => Promise<v
           alias: {
             '@runtime': join(PACKAGE_ROOT, 'src', 'runtime', 'index.ts')
           }
+        },
+        css: {
+          modules: {
+            localsConvention: 'camelCaseOnly'
+          }
         }
       };
     },

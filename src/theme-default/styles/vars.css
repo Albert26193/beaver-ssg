@@ -1,0 +1,351 @@
+/**
+ * Colors Base
+ *
+ * These are the pure base color presets. Most of the time, you should not be
+ * using these colors directly in the theme but rather use "Colors Theme"
+ * instead because those are "Theme (light or dark)" dependant.
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-c-white: #ffffff;
+  --beaver-c-white-soft: #f9f9f9;
+  --beaver-c-white-mute: #f1f1f1;
+
+  --beaver-c-black: #1a1a1a;
+  --beaver-c-black-pure: #000000;
+  --beaver-c-black-soft: #242424;
+  --beaver-c-black-mute: #2f2f2f;
+
+  --beaver-c-gray: #8e8e8e;
+  --beaver-c-gray-light-1: #aeaeae;
+  --beaver-c-gray-light-2: #c7c7c7;
+  --beaver-c-gray-light-3: #d1d1d1;
+  --beaver-c-gray-light-4: #e5e5e5;
+  --beaver-c-gray-light-5: #f2f2f2;
+  --beaver-c-gray-dark-1: #636363;
+  --beaver-c-gray-dark-2: #484848;
+  --beaver-c-gray-dark-3: #3a3a3a;
+  --beaver-c-gray-dark-4: #282828;
+  --beaver-c-gray-dark-5: #202020;
+
+  --beaver-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --beaver-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --beaver-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --beaver-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --beaver-c-indigo: #213547;
+  --beaver-c-indigo-soft: #476582;
+  --beaver-c-indigo-light: #aac8e4;
+  --beaver-c-indigo-lighter: #c9def1;
+  --beaver-c-indigo-dark: #1d2f3f;
+  --beaver-c-indigo-darker: #14212e;
+
+  --beaver-c-text-light-1: var(--beaver-c-indigo);
+  --beaver-c-text-light-2: rgba(60, 60, 60, 0.7);
+  --beaver-c-text-light-3: rgba(60, 60, 60, 0.33);
+  --beaver-c-text-light-4: rgba(60, 60, 60, 0.18);
+
+  --beaver-c-text-dark-1: rgba(255, 255, 255, 0.87);
+  --beaver-c-text-dark-2: rgba(235, 235, 235, 0.6);
+  --beaver-c-text-dark-3: rgba(235, 235, 235, 0.38);
+  --beaver-c-text-dark-4: rgba(235, 235, 235, 0.18);
+
+  --beaver-c-green: #21b8a3;
+  --beaver-c-green-light: #41c6b0;
+  --beaver-c-green-lighter: #41c6b0;
+  --beaver-c-green-dark: #149684;
+  --beaver-c-green-darker: #149684;
+  --beaver-c-green-dimm: #062521;
+
+  --beaver-c-green-dimm-1: rgba(66, 184, 131, 0.5);
+  --beaver-c-green-dimm-2: rgba(66, 184, 131, 0.25);
+  --beaver-c-green-dimm-3: rgba(66, 184, 131, 0.05);
+
+  --beaver-c-blue: #646cff;
+  --beaver-c-blue-light: #747bff;
+  --beaver-c-blue-lighter: #9499ff;
+  --beaver-c-blue-lightest: #bcc0ff;
+  --beaver-c-blue-dark: #535bf2;
+  --beaver-c-blue-darker: #454ce1;
+  --beaver-c-blue-dimm: rgba(100, 108, 255, 0.08);
+
+  --beaver-c-yellow: #ffc517;
+  --beaver-c-yellow-light: #fcd253;
+  --beaver-c-yellow-lighter: #fcfc7c;
+  --beaver-c-yellow-darker: #ad850e;
+  --beaver-c-yellow-dimm-1: rgba(255, 197, 23, 0.5);
+  --beaver-c-yellow-dimm-2: rgba(255, 197, 23, 0.25);
+  --beaver-c-yellow-dimm-3: rgba(255, 197, 23, 0.05);
+
+  --beaver-c-red: #ed3c50;
+  --beaver-c-red-light: #f54e82;
+  --beaver-c-red-lighter: #fd1d7c;
+  --beaver-c-red-darker: #ab2131;
+  --beaver-c-red-dimm-1: rgba(237, 60, 80, 0.5);
+  --beaver-c-red-dimm-2: rgba(237, 60, 80, 0.25);
+  --beaver-c-red-dimm-3: rgba(237, 60, 80, 0.05);
+}
+
+/**
+ * Colors Theme
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-c-bg: var(--beaver-c-white);
+  --beaver-c-bg-soft: var(--beaver-c-white-soft);
+  --beaver-c-bg-mute: var(--beaver-c-white-mute);
+  --beaver-c-bg-alt: var(--beaver-c-white-soft);
+
+  --beaver-c-divider: var(--beaver-c-divider-light-1);
+  --beaver-c-divider-light: var(--beaver-c-divider-light-2);
+
+  --beaver-c-text-1: var(--beaver-c-text-light-1);
+  --beaver-c-text-2: var(--beaver-c-text-light-2);
+  --beaver-c-text-3: var(--beaver-c-text-light-3);
+  --beaver-c-text-4: var(--beaver-c-text-light-4);
+
+  --beaver-c-text-code: var(--beaver-c-indigo-soft);
+
+  --beaver-c-brand: var(--beaver-c-green);
+  --beaver-c-brand-light: var(--beaver-c-green-light);
+  --beaver-c-brand-lighter: var(--beaver-c-green-lighter);
+  --beaver-c-brand-dark: var(--beaver-c-green-dark);
+  --beaver-c-brand-darker: var(--beaver-c-green-darker);
+}
+
+.dark {
+  --beaver-c-bg: var(--beaver-c-black-soft);
+  --beaver-c-bg-soft: var(--beaver-c-black-mute);
+  --beaver-c-bg-mute: var(--beaver-c-gray-dark-3);
+  --beaver-c-bg-alt: var(--beaver-c-black);
+
+  --beaver-c-divider: var(--beaver-c-divider-dark-1);
+  --beaver-c-divider-light: var(--beaver-c-divider-dark-2);
+
+  --beaver-c-divider-inverse: var(--beaver-c-divider-light-1);
+  --beaver-c-divider-inverse-light: var(--beaver-c-divider-light-2);
+
+  --beaver-c-text-1: var(--beaver-c-text-dark-1);
+  --beaver-c-text-2: var(--beaver-c-text-dark-2);
+  --beaver-c-text-3: var(--beaver-c-text-dark-3);
+  --beaver-c-text-4: var(--beaver-c-text-dark-4);
+
+  --beaver-c-text-inverse-1: var(--beaver-c-text-light-1);
+  --beaver-c-text-inverse-2: var(--beaver-c-text-light-2);
+  --beaver-c-text-inverse-3: var(--beaver-c-text-light-3);
+  --beaver-c-text-inverse-4: var(--beaver-c-text-light-4);
+
+  --beaver-c-text-code: var(--beaver-c-indigo-lighter);
+}
+
+/**
+ * Typography
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-font-family-base: 'Inter var experimental', 'Inter var', -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  --beaver-font-family-mono: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/**
+ * Layouts
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-layout-max-width: 1440px;
+}
+
+/**
+ * Component: Code
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-code-line-height: 1.7;
+  --beaver-code-font-size: 0.875em;
+
+  --beaver-code-block-color: var(--beaver-c-text-dark-1);
+  --beaver-code-block-bg: #292d3e;
+
+  --beaver-code-line-highlight-color: rgba(0, 0, 0, 0.5);
+  --beaver-code-line-number-color: var(--beaver-c-text-dark-3);
+
+  --beaver-code-copy-code-hover-bg: rgba(255, 255, 255, 0.05);
+  --beaver-code-copy-code-active-text: var(--beaver-c-text-dark-2);
+}
+
+/**
+ * Icons
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-icon-copy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='20' width='20' stroke='rgba(128,128,128,1)' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2'/%3E%3C/svg%3E");
+  --beaver-icon-copied: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='20' width='20' stroke='rgba(128,128,128,1)' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9 2 2 4-4'/%3E%3C/svg%3E");
+  --beaver-icon-tip: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M512 960C264.58 960 64 759.42 64 512S264.58 64 512 64s448 200.58 448 448-200.58 448-448 448z m0-832c-212.08 0-384 171.92-384 384s171.92 384 384 384 384-171.92 384-384-171.92-384-384-384z m0 112c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z m0 160c-17.67 0-32 14.33-32 32v320c0 17.67 14.33 32 32 32 17.67 0 32-14.33 32-32V432c0-17.67-14.33-32-32-32z' fill='%2321b8a3'/%3E%3C/svg%3E");
+}
+
+.dark {
+  --beaver-code-block-bg: var(--beaver-c-bg-alt);
+}
+
+/**
+ * Z-indexes
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-z-index-local-nav: 10;
+  --beaver-z-index-nav: 20;
+  --beaver-z-index-layout-top: 30;
+  --beaver-z-index-backdrop: 40;
+  --beaver-z-index-sidebar: 50;
+  --beaver-z-index-footer: 60;
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-button-brand-border: var(--beaver-c-brand-light);
+  --beaver-button-brand-text: var(--beaver-c-text-dark-1);
+  --beaver-button-brand-bg: var(--beaver-c-brand);
+  --beaver-button-brand-hover-border: var(--beaver-c-brand-light);
+  --beaver-button-brand-hover-text: var(--beaver-c-text-dark-1);
+  --beaver-button-brand-hover-bg: var(--beaver-c-brand-light);
+  --beaver-button-brand-active-border: var(--beaver-c-brand-light);
+  --beaver-button-brand-active-text: var(--beaver-c-text-dark-1);
+  --beaver-button-brand-active-bg: var(--beaver-button-brand-bg);
+
+  --beaver-button-alt-border: var(--beaver-c-gray-light-3);
+  --beaver-button-alt-text: var(--beaver-c-text-light-1);
+  --beaver-button-alt-bg: var(--beaver-c-gray-light-5);
+  --beaver-button-alt-hover-border: var(--beaver-c-gray-light-3);
+  --beaver-button-alt-hover-text: var(--beaver-c-text-light-1);
+  --beaver-button-alt-hover-bg: var(--beaver-c-gray-light-4);
+  --beaver-button-alt-active-border: var(--beaver-c-gray-light-3);
+  --beaver-button-alt-active-text: var(--beaver-c-text-light-1);
+  --beaver-button-alt-active-bg: var(--beaver-c-gray-light-3);
+
+  --beaver-button-sponsor-border: var(--beaver-c-gray-light-3);
+  --beaver-button-sponsor-text: var(--beaver-c-text-light-2);
+  --beaver-button-sponsor-bg: transparent;
+  --beaver-button-sponsor-hover-border: var(--beaver-c-sponsor);
+  --beaver-button-sponsor-hover-text: var(--beaver-c-sponsor);
+  --beaver-button-sponsor-hover-bg: transparent;
+  --beaver-button-sponsor-active-border: var(--beaver-c-sponsor);
+  --beaver-button-sponsor-active-text: var(--beaver-c-sponsor);
+  --beaver-button-sponsor-active-bg: transparent;
+}
+
+.dark {
+  --beaver-button-brand-border: var(--beaver-c-brand-light);
+  --beaver-button-brand-text: var(--beaver-c-text-dark-1);
+  --beaver-button-brand-bg: var(--beaver-c-brand-dark);
+  --beaver-button-brand-hover-border: var(--beaver-c-brand-lighter);
+  --beaver-button-brand-hover-text: var(--beaver-c-text-dark-1);
+  --beaver-button-brand-hover-bg: var(--beaver-c-brand);
+  --beaver-button-brand-active-border: var(--beaver-c-brand-lighter);
+  --beaver-button-brand-active-text: var(--beaver-c-text-dark-1);
+  --beaver-button-brand-active-bg: var(--beaver-button-brand-bg);
+
+  --beaver-button-alt-border: var(--beaver-c-gray-dark-2);
+  --beaver-button-alt-text: var(--beaver-c-text-dark-1);
+  --beaver-button-alt-bg: var(--beaver-c-bg-mute);
+  --beaver-button-alt-hover-border: var(--beaver-c-gray-dark-2);
+  --beaver-button-alt-hover-text: var(--beaver-c-text-dark-1);
+  --beaver-button-alt-hover-bg: var(--beaver-c-gray-dark-2);
+  --beaver-button-alt-active-border: var(--beaver-c-gray-dark-2);
+  --beaver-button-alt-active-text: var(--beaver-c-text-dark-1);
+  --beaver-button-alt-active-bg: var(--beaver-button-alt-bg);
+
+  --beaver-button-sponsor-border: var(--beaver-c-gray-dark-1);
+  --beaver-button-sponsor-text: var(--beaver-c-text-dark-2);
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-custom-block-code-font-size: 13px;
+
+  --beaver-custom-block-info-border: var(--beaver-c-divider-light);
+  --beaver-custom-block-info-text: var(--beaver-c-text-2);
+  --beaver-custom-block-info-bg: var(--beaver-c-white-soft);
+  --beaver-custom-block-info-code-bg: var(--beaver-c-gray-light-4);
+
+  --beaver-custom-block-tip-border: var(--beaver-c-green-dimm-1);
+  --beaver-custom-block-tip-text: var(--beaver-c-green-darker);
+  --beaver-custom-block-tip-bg: var(--beaver-c-green-dimm-3);
+  --beaver-custom-block-tip-code-bg: var(--beaver-custom-block-tip-bg);
+
+  --beaver-custom-block-warning-border: var(--beaver-c-yellow-dimm-1);
+  --beaver-custom-block-warning-text: var(--beaver-c-yellow-darker);
+  --beaver-custom-block-warning-bg: var(--beaver-c-yellow-dimm-3);
+  --beaver-custom-block-warning-code-bg: var(--beaver-custom-block-warning-bg);
+
+  --beaver-custom-block-danger-border: var(--beaver-c-red-dimm-1);
+  --beaver-custom-block-danger-text: var(--beaver-c-red-darker);
+  --beaver-custom-block-danger-bg: var(--beaver-c-red-dimm-3);
+  --beaver-custom-block-danger-code-bg: var(--beaver-custom-block-danger-bg);
+}
+
+.dark {
+  --beaver-custom-block-info-border: var(--beaver-c-divider-light);
+  --beaver-custom-block-info-bg: var(--beaver-c-black-mute);
+  --beaver-custom-block-info-code-bg: var(--beaver-c-gray-dark-4);
+
+  --beaver-custom-block-tip-border: var(--beaver-c-green-dimm-2);
+  --beaver-custom-block-tip-text: var(--beaver-c-green-light);
+
+  --beaver-custom-block-warning-border: var(--beaver-c-yellow-dimm-2);
+  --beaver-custom-block-warning-text: var(--beaver-c-yellow-light);
+
+  --beaver-custom-block-danger-border: var(--beaver-c-red-dimm-2);
+  --beaver-custom-block-danger-text: var(--beaver-c-red-light);
+}
+
+/**
+ * Component: Nav
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-nav-height: 56px;
+}
+
+/**
+ * Component: Sidebar
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-sidebar-width: 272px;
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-home-hero-name-color: transparent;
+  --beaver-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    var(--beaver-c-brand) 30%,
+    #41d1ff
+  );
+
+  --beaver-home-hero-image-background-image: none;
+  --beaver-home-hero-image-filter: none;
+}
+
+/**
+ * Shadows
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --beaver-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --beaver-shadow-2: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
+  --beaver-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+  --beaver-shadow-4: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
+  --beaver-shadow-5: 0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
+}

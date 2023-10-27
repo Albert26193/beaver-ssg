@@ -1,0 +1,20 @@
+.link:hover {
+  color: var(--beaver-c-brand);
+  transition: color 0.2s;
+}
+
+.link {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.social-link-icon {
+  display: flex;
+  fill: currentColor;
+  transition: color 0.2s;
+  color: var(--beaver-c-text-2);
+  &:hover {
+    color: var(--beaver-c-text-1);
+  }
+}
