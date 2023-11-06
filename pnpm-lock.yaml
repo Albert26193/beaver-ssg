@@ -29,6 +29,9 @@ dependencies:
   hast-util-from-html:
     specifier: ^2.0.1
     version: 2.0.1
+  lodash-es:
+    specifier: ^4.17.21
+    version: 4.17.21
   ora:
     specifier: ^7.0.1
     version: 7.0.1
@@ -94,6 +97,9 @@ devDependencies:
   '@types/hast':
     specifier: ^3.0.1
     version: 3.0.1
+  '@types/lodash':
+    specifier: ^4.14.200
+    version: 4.14.200
   '@types/mdast':
     specifier: ^3.0.10
     version: 3.0.10
@@ -1125,6 +1131,10 @@ packages:
     resolution: {integrity: sha512-8t92P+oeW4d/CRQfJaSqEwXujrhH4OEeHRjGU3v1Q8mUS8GPF3yiX26sw4svv6faL2HfBtGTe2xWIoVgN3dy9w==}
     dependencies:
       '@types/node': 20.6.5
+    dev: true
+
+  /@types/lodash@4.14.200:
+    resolution: {integrity: sha512-YI/M/4HRImtNf3pJgbF+W6FrXovqj+T+/HpENLTooK9PnkacBsDpeP3IpHab40CClUfhNmdM2WTNP2sa2dni5Q==}
     dev: true
 
   /@types/mdast@3.0.10:
@@ -3894,6 +3904,10 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       p-locate: 5.0.0
+
+  /lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
 
   /lodash.camelcase@4.3.0:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
