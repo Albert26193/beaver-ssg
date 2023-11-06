@@ -200,6 +200,7 @@
   --beaver-z-index-backdrop: 40;
   --beaver-z-index-sidebar: 50;
   --beaver-z-index-footer: 60;
+  --beaver-aside-width: 268px;
 }
 
 /**

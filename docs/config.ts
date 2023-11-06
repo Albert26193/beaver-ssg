@@ -20,6 +20,10 @@ export default defineConfig({
             {
               text: '如何安装',
               link: '/guide/b'
+            },
+            {
+              text: '如何使用',
+              link: '/guide/c'
             }
           ]
         }

@@ -1,0 +1,408 @@
+/**
+ * Headings
+ * -------------------------------------------------------------------------- */
+
+.beaver-doc h1,
+.beaver-doc h2,
+.beaver-doc h3,
+.beaver-doc h4,
+.beaver-doc h5,
+.beaver-doc h6 {
+  position: relative;
+  font-weight: 600;
+  outline: none;
+}
+
+.beaver-doc h1 {
+  letter-spacing: -0.02em;
+  line-height: 40px;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.beaver-doc h2 {
+  margin: 48px 0 16px;
+  /* padding-top: 24px; */
+  letter-spacing: -0.02em;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.beaver-doc h3 {
+  margin: 32px 0 0;
+  letter-spacing: -0.01em;
+  line-height: 28px;
+  font-size: 20px;
+}
+
+.beaver-doc .header-anchor {
+  float: left;
+  margin-left: -0.87em;
+  padding-right: 0.23em;
+  font-weight: 500;
+  opacity: 0;
+  transition:
+    color 0.25s,
+    opacity 0.25s;
+}
+
+.beaver-doc h1:hover .header-anchor,
+.beaver-doc h1 .header-anchor:focus,
+.beaver-doc h2:hover .header-anchor,
+.beaver-doc h2 .header-anchor:focus,
+.beaver-doc h3:hover .header-anchor,
+.beaver-doc h3 .header-anchor:focus,
+.beaver-doc h4:hover .header-anchor,
+.beaver-doc h4 .header-anchor:focus,
+.beaver-doc h5:hover .header-anchor,
+.beaver-doc h5 .header-anchor:focus,
+.beaver-doc h6:hover .header-anchor,
+.beaver-doc h6 .header-anchor:focus {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .beaver-doc h1 {
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    font-size: 32px;
+  }
+}
+
+/**
+   * Paragraph and inline elements
+   * -------------------------------------------------------------------------- */
+
+.beaver-doc p,
+.beaver-doc summary {
+  margin: 16px 0;
+}
+
+.beaver-doc p {
+  z-index: 2;
+  line-height: 28px;
+}
+
+.beaver-doc blockquote {
+  margin: 16px 0;
+  border-left: 2px solid var(--beaver-c-divider);
+  padding-left: 16px;
+  transition: border-color 0.5s;
+}
+
+.beaver-doc blockquote > p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--beaver-c-text-2);
+  transition: color 0.5s;
+}
+
+.beaver-doc a {
+  font-weight: 500;
+  color: var(--beaver-c-brand);
+  text-decoration-style: dotted;
+  transition: color 0.25s;
+}
+
+.beaver-doc a:hover {
+  color: var(--beaver-c-brand-dark);
+}
+
+.beaver-doc strong {
+  font-weight: 600;
+}
+
+/**
+   * Lists
+   * -------------------------------------------------------------------------- */
+
+.beaver-doc ul,
+.beaver-doc ol {
+  padding-left: 1.25rem;
+  margin: 16px 0;
+}
+
+.beaver-doc ul {
+  list-style: disc;
+}
+
+.beaver-doc ol {
+  list-style: decimal;
+}
+
+.beaver-doc li + li {
+  margin-top: 8px;
+}
+
+.beaver-doc li > ol,
+.beaver-doc li > ul {
+  margin: 8px 0 0;
+}
+
+/**
+   * Table
+   * -------------------------------------------------------------------------- */
+
+.beaver-doc table {
+  display: block;
+  border-collapse: collapse;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.beaver-doc tr {
+  border-top: 1px solid var(--beaver-c-divider);
+  transition: background-color 0.5s;
+}
+
+.beaver-doc tr:nth-child(2n) {
+  background-color: var(--beaver-c-bg-soft);
+}
+
+.beaver-doc th,
+.beaver-doc td {
+  border: 1px solid var(--beaver-c-divider);
+  padding: 12px 16px;
+}
+
+.beaver-doc th {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: var(--beaver-c-white-soft);
+}
+
+.dark .beaver-doc th {
+  background-color: var(--beaver-c-black);
+}
+
+/**
+   * Decorational elements
+   * -------------------------------------------------------------------------- */
+
+.beaver-doc hr {
+  margin: 16px 0;
+  border: none;
+  border-top: 1px solid var(--beaver-c-divider-light);
+}
+
+/**
+   * Custom Block
+   * -------------------------------------------------------------------------- */
+
+.beaver-doc .custom-block {
+  margin: 16px 0;
+}
+
+.beaver-doc .custom-block p {
+  margin: 8px 0;
+  line-height: 24px;
+}
+
+.beaver-doc .custom-block p:first-child {
+  margin: 0;
+}
+
+.beaver-doc .custom-block a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: opacity 0.25s;
+}
+
+.beaver-doc .custom-block a:hover {
+  opacity: 0.6;
+}
+
+.beaver-doc .custom-block code {
+  font-size: var(--beaver-custom-block-code-font-size);
+  font-weight: 700;
+  color: inherit;
+}
+
+.beaver-doc .custom-block div[class*='language-'] {
+  margin: 8px 0;
+}
+
+.beaver-doc .custom-block div[class*='language-'] code {
+  font-weight: 400;
+  background-color: transparent;
+}
+
+/**
+   * Code
+   * -------------------------------------------------------------------------- */
+
+/* inline code */
+.beaver-doc :not(pre, h1, h2, h3, h4, h5, h6) > code {
+  font-size: var(--beaver-code-font-size);
+}
+
+.beaver-doc :not(pre, div) > code {
+  border-radius: 4px;
+  padding: 3px 6px;
+  color: var(--beaver-c-text-code);
+  background-color: var(--beaver-c-bg-mute);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+}
+
+.beaver-doc h1 > code,
+.beaver-doc h2 > code,
+.beaver-doc h3 > code {
+  font-size: 0.9em;
+}
+
+.beaver-doc a > code {
+  color: var(--beaver-c-brand);
+  transition: color 0.25s;
+}
+
+.beaver-doc a:hover > code {
+  color: var(--beaver-c-brand-dark);
+}
+
+.beaver-doc div[class*='language-'] {
+  position: relative;
+  margin: 16px -24px;
+  background-color: var(--beaver-code-block-bg);
+  overflow-x: auto;
+  transition: background-color 0.5s;
+}
+
+@media (min-width: 640px) {
+  .beaver-doc div[class*='language-'] {
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .beaver-doc li div[class*='language-'] {
+    border-radius: 8px 0 0 8px;
+  }
+}
+
+.beaver-doc div[class*='language-'] + div[class*='language-'],
+.beaver-doc div[class$='-api'] + div[class*='language-'],
+.beaver-doc div[class*='language-'] + div[class$='-api'] > div[class*='language-'] {
+  margin-top: -8px;
+}
+
+.beaver-doc [class*='language-'] pre,
+.beaver-doc [class*='language-'] code {
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.beaver-doc [class*='language-'] pre {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 16px 0;
+  background: transparent;
+  overflow-x: auto;
+}
+
+.beaver-doc [class*='language-'] code {
+  display: block;
+  padding: 0 24px;
+  width: fit-content;
+  min-width: 100%;
+  line-height: var(--beaver-code-line-height);
+  font-size: var(--beaver-code-font-size);
+  color: var(--beaver-code-block-color);
+  transition: color 0.5s;
+}
+
+.beaver-doc [class*='language-'] code .highlighted {
+  background-color: var(--beaver-code-line-highlight-color);
+  transition: background-color 0.5s;
+  margin: 0 -24px;
+  padding: 0 24px;
+  width: calc(100% + 2 * 24px);
+  display: inline-block;
+}
+
+.beaver-doc [class*='language-'] > button.copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 3;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--beaver-code-block-bg);
+  opacity: 0;
+  cursor: pointer;
+  background-image: var(--beaver-icon-copy);
+  background-position: 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  transition: opacity 0.4s;
+}
+
+.beaver-doc [class*='language-']:hover > button.copy,
+.beaver-doc [class*='language-'] > button.copy:focus {
+  opacity: 1;
+}
+
+.beaver-doc [class*='language-'] > button.copy:hover {
+  background-color: var(--beaver-code-copy-code-hover-bg);
+}
+
+.beaver-doc [class*='language-'] > button.copy.copied,
+.beaver-doc [class*='language-'] > button.copy:hover.copied {
+  border-radius: 0 4px 4px 0;
+  background-color: var(--beaver-code-copy-code-hover-bg);
+  background-image: var(--beaver-icon-copied);
+}
+
+.beaver-doc [class*='language-'] > button.copy.copied::before,
+.beaver-doc [class*='language-'] > button.copy:hover.copied::before {
+  position: relative;
+  left: -65px;
+  display: block;
+  border-radius: 4px 0 0 4px;
+  padding-top: 8px;
+  width: 64px;
+  height: 40px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--beaver-code-copy-code-active-text);
+  background-color: var(--beaver-code-copy-code-hover-bg);
+  white-space: nowrap;
+  content: 'Copied';
+}
+
+.beaver-doc [class*='language-'] > span.lang {
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  z-index: 2;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--beaver-c-text-dark-3);
+  transition:
+    color 0.4s,
+    opacity 0.4s;
+}
+
+.beaver-doc [class*='language-']:hover > button.copy + span.lang,
+.beaver-doc [class*='language-'] > button.copy:focus + span.lang {
+  opacity: 0;
+}

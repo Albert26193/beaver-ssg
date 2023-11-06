@@ -1,4 +1,4 @@
-import { usePageData } from '../../runtime';
+import { usePageData, Content } from '../../runtime';
 import { Nav } from '../components/Nav';
 import '../styles/base.css';
 import '../styles/vars.css';
@@ -10,6 +10,7 @@ export function Layout() {
   const pageData = usePageData();
   const { pageType } = pageData;
   const getContent = () => {
+    // return <Content />;
     if (pageType === 'home') {
       return <HomeLayout />;
     } else if (pageType === 'doc') {
@@ -21,7 +22,13 @@ export function Layout() {
   return (
     <div>
       <Nav />
-      {getContent()}
+      <section
+        style={{
+          paddingTop: 'var(--beaver-nav-height)'
+        }}
+      >
+        {getContent()}
+      </section>
     </div>
   );
 }

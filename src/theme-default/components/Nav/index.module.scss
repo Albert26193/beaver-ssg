@@ -1,6 +1,7 @@
 .nav {
   padding-left: max(32px, calc(32px + (100vw - var(--beaver-layout-max-width)) / 2));
   padding-right: max(32px, calc(32px + (100vw - var(--beaver-layout-max-width)) / 2));
+  background-color: var(--beaver-c-bg);
 }
 
 .link:hover {
