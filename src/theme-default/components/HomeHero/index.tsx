@@ -63,8 +63,7 @@ export function HomeHero(props: { hero: Hero }) {
         </div>
         {hero.image && (
           <div
-            w="max-96"
-            h="max-96"
+            className="max-w-26rem max-h-26rem"
             flex="center"
             m="auto"
           >

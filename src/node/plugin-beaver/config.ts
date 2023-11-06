@@ -2,6 +2,8 @@ import { relative, join } from 'path';
 import { Plugin } from 'vite';
 import { SiteConfig } from 'shared/types/index';
 import { PACKAGE_ROOT } from '../../node/constants';
+import sirv from 'sirv';
+import { Server } from 'http';
 
 const SITE_DATA_ID = 'beaver:site-data';
 
@@ -34,9 +36,11 @@ export function pluginConfig(config: SiteConfig, restartServer?: () => Promise<v
         return `export default ${JSON.stringify(config.siteData)}`;
       }
     },
-    // configureServer(s) {
-    //   server = s;
-    // },
+    configureServer(server) {
+      const publicDir = join(config.root, 'public');
+      server.middlewares.use(sirv(publicDir));
+    },
+
     async handleHotUpdate(ctx) {
       const customWatchedFiles = [config.configPath];
       const include = (id: string) => customWatchedFiles.some((file) => id.includes(file));

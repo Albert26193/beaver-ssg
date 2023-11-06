@@ -106,11 +106,11 @@
 
   --beaver-c-text-code: var(--beaver-c-indigo-soft);
 
-  --beaver-c-brand: var(--beaver-c-green);
-  --beaver-c-brand-light: var(--beaver-c-green-light);
-  --beaver-c-brand-lighter: var(--beaver-c-green-lighter);
-  --beaver-c-brand-dark: var(--beaver-c-green-dark);
-  --beaver-c-brand-darker: var(--beaver-c-green-darker);
+  --beaver-c-brand: var(--beaver-c-blue);
+  --beaver-c-brand-light: var(--beaver-c-blue-light);
+  --beaver-c-brand-lighter: var(--beaver-c-blue-lighter);
+  --beaver-c-brand-dark: var(--beaver-c-blue-dark);
+  --beaver-c-brand-darker: var(--beaver-c-blue-darker);
 }
 
 .dark {
