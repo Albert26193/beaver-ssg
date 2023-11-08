@@ -31,7 +31,7 @@
 
 ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230415004239.png)
 
-```
+```shell
        Client                                                  Server
          |                                                       |
          |----------- SYN(ISN=2000) --------->>>>>>>|            |
@@ -52,4 +52,4 @@
 
 - [ ] todo
 
-`hello`
+![image.png](https://media.giphy.com/media/JsWIKoeRiGOQI12xdi/giphy.gif)
