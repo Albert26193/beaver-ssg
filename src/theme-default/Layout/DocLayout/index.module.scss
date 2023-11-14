@@ -3,18 +3,28 @@ $sidebarWidth: calc(var(--beaver-sidebar-width) + ((100vw - var(--beaver-layout-
 $sidebarPadding: calc(32px + (100vw - var(--beaver-layout-max-width)) / 2);
 
 .content {
-  padding: 48px 24px;
-  margin-left: calc(
-    var(--beaver-sidebar-width) + ((100vw - var(--beaver-layout-max-width)) / 2) + 48px
-  );
-  margin-right: $sidebarPadding;
-  // 100 vw - sidebar 的宽度
-  max-width: calc(100vw - $sidebarWidth);
+  padding: 48px 16px;
+}
+
+@media (min-width: 960px) {
+  .content {
+    margin-left: calc(var(--beaver-sidebar-width) + 48px);
+    margin-right: 48px;
+    max-width: calc(100vw - var(--beaver-sidebar-width) - 96px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .content {
+    margin-left: calc(var(--beaver-sidebar-width) + $sidebarPadding);
+    margin-right: $sidebarPadding;
+    max-width: calc(100vw - $sidebarWidth - $sidebarPadding * 2);
+  }
 }
 
 .doc-content {
   margin-right: 80px;
-  min-width: 768px;
+  min-width: 480px;
   // 正文部分最大宽度: 100vw - sidebar 的宽度 - aside 的宽度 - 右边的 padding 和 margin
   max-width: calc(
     100vw - $sidebarWidth - var(--beaver-aside-width) - (100vw - var(--beaver-layout-max-width)) / 2 -
@@ -25,6 +35,7 @@ $sidebarPadding: calc(32px + (100vw - var(--beaver-layout-max-width)) / 2);
 .aside-container {
   position: sticky;
   top: 0;
+  padding-right: 60px;
   margin-top: calc(var(--beaver-nav-height) * -1 - 32px);
   padding-top: calc(var(--beaver-nav-height) + 32px);
   height: 100vh;
