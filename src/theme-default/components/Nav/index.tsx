@@ -41,9 +41,15 @@ export function Nav() {
             beaver.js
           </a>
         </div>
-        <div flex="~">
+        <div
+          flex="~"
+          className="mr-4"
+        >
           {/* 普通菜单 */}
-          <div flex="~">
+          <div
+            flex="~"
+            className="mr-8"
+          >
             {nav.map((item) => (
               <MenuItem
                 {...item}
@@ -51,14 +57,17 @@ export function Nav() {
               />
             ))}
           </div>
-          <div flex="~">
+          <div
+            flex="~"
+            className="mr-4"
+          >
             <SwitchAppearance />
           </div>
           <div
             className={styles.socialLinkIcon}
             ml="2"
           >
-            <a href="/">
+            <a href="https://www.github.com">
               <div className="i-carbon-logo-github w-5 h-5 fill-current"></div>
             </a>
           </div>
