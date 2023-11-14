@@ -1,6 +1,14 @@
 
 # 计算机网络-TCP连接的三次握手
 
+<img src="https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20231112230440.png" alt="test" title="demo"></img>
+
+> demo<br>
+> this is the demo
+
+**bold**
+
+*ita*
 ## 1. ISN
 
 - 在建立连接之初，通信双方都会各自选择一个序列号，称之为初始序列号。在建立连接时，通信双方通过 SYN 报文交换彼此的 ISN，如下图所示 
@@ -33,6 +41,7 @@
 
 - 同步初始序列号的意义是什么，比如服务端接受了客户端的一个TCP段，TCP头部写着序号 2000。在此前，他们建立了三次握手机制，确定了客户端的ISN是200，那么下面的通信怎么展开？
 - 同步初始序列号的意义是什么，比如服务端接受了客户端的一个TCP段，TCP头部写着序号 2000。在此前，他们建立了三次握手机制，确定了客户端的ISN是200，那么下面的通信怎么展开？
+---
 - 同步初始序列号的意义是什么，比如服务端接受了客户端的一个TCP段，TCP头部写着序号 2000。在此前，他们建立了三次握手机制，确定了客户端的ISN是200，那么下面的通信怎么展开？
 - 同步初始序列号的意义是什么，比如服务端接受了客户端的一个TCP段，TCP头部写着序号 2000。在此前，他们建立了三次握手机制，确定了客户端的ISN是200，那么下面的通信怎么展开？
 - 同步初始序列号的意义是什么，比如服务端接受了客户端的一个TCP段，TCP头部写着序号 2000。在此前，他们建立了三次握手机制，确定了客户端的ISN是200，那么下面的通信怎么展开？
@@ -275,6 +284,33 @@
 
 ```js
 console.log('hello world')
+
+export const rehypePluginShiki: Plugin<[Options], Root> = ({ highlighter }) => {
+  return (tree) => {
+    visit(tree, 'element', (node, index, parent) => {
+      // <pre><code>...</code></pre>
+      if (
+        node.tagName === 'pre' &&
+        node.children[0]?.type === 'element' &&
+        node.children[0].tagName === 'code'
+      ) {
+        const codeNode = node.children[0];
+        // console.log(codeNode);
+        const codeContent = (codeNode.children[0] as Text).value;
+        const codeClassName = codeNode.properties?.className?.toString() || '';
+
+        const lang = codeClassName.split('-')[1];
+        if (!lang) {
+          return;
+        }
+        const highlightedCode = highlighter.codeToHtml(codeContent, { lang, theme: 'github-dark' });
+        const fragmentAst = fromHtml(highlightedCode, { fragment: true });
+        parent.children.splice(index, 1, ...fragmentAst.children);
+      }
+    });
+  };
+};
+
 ```
 
 ```html

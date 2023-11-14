@@ -110,6 +110,12 @@
 
 .beaver-doc strong {
   font-weight: 600;
+  color: var(--beaver-c-text-strong);
+}
+
+.beaver-doc em {
+  font-style: italic;
+  color: var(--beaver-c-text-em);
 }
 
 /**
@@ -180,7 +186,8 @@
    * -------------------------------------------------------------------------- */
 
 .beaver-doc hr {
-  margin: 16px 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
   border: none;
   border-top: 1px solid var(--beaver-c-divider-light);
 }
@@ -240,6 +247,7 @@
 .beaver-doc :not(pre, div) > code {
   border-radius: 4px;
   padding: 3px 6px;
+  /*TODO*/
   color: var(--beaver-c-text-code);
   background-color: var(--beaver-c-bg-mute);
   transition:

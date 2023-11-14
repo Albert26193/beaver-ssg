@@ -26,7 +26,10 @@ export const rehypePluginShiki: Plugin<[Options], Root> = ({ highlighter }) => {
         if (!lang) {
           return;
         }
-        const highlightedCode = highlighter.codeToHtml(codeContent, { lang });
+        const highlightedCode = highlighter.codeToHtml(codeContent, {
+          lang,
+          theme: 'material-theme-palenight'
+        });
         const fragmentAst = fromHtml(highlightedCode, { fragment: true });
         parent.children.splice(index, 1, ...fragmentAst.children);
       }

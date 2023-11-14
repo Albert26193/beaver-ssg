@@ -33,7 +33,14 @@ export async function pluginMdxRollup(): Promise<Plugin> {
         }
       ],
       rehypePluginPreWrapper as unknown,
-      [rehypePluginShiki, { highlighter: await shiki.getHighlighter({ theme: 'nord' }) }]
+      [
+        rehypePluginShiki,
+        {
+          highlighter: await shiki.getHighlighter({
+            themes: ['github-dark', 'nord', 'solarized-dark', 'material-theme-palenight']
+          })
+        }
+      ]
     ]
   }) as unknown as Plugin;
 }
