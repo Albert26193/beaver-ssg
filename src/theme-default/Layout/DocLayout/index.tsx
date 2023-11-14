@@ -33,7 +33,7 @@ export function DocLayout() {
           </div>
           <DocFooter />
         </div>
-        <div className="styles.asideContainer">
+        <div className={styles.asideContainer}>
           <Aside headers={toc} />
         </div>
       </div>
