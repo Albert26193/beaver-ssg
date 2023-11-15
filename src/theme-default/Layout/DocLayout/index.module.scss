@@ -21,7 +21,6 @@ $sidebarPadding: calc(32px + (100vw - var(--beaver-layout-max-width)) / 2);
 
 @media (min-width: 1440px) {
   .content {
-    margin-left: calc(var(--beaver-sidebar-width) + $sidebarPadding);
     margin-right: $sidebarPadding;
     max-width: calc(100vw - $sidebarWidth - $sidebarPadding * 2);
   }
