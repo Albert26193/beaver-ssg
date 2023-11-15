@@ -37,7 +37,7 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1440px) {
   .sidebar {
     padding-left: max(32px, calc(32px + (100% - var(--beaver-layout-max-width)) / 2));
     width: calc(var(--beaver-sidebar-width) + ((100% - var(--beaver-layout-max-width)) / 2));

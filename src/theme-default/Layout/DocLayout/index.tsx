@@ -28,7 +28,7 @@ export function DocLayout() {
         flex="~"
       >
         <div className={styles.docContent}>
-          <div className="beaver-doc">
+          <div className="beaver-doc break-words">
             <Content />
           </div>
           <DocFooter />

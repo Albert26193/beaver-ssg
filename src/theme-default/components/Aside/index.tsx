@@ -25,7 +25,7 @@ export function Aside(props: AsideProps) {
       <li key={header.id}>
         <a
           href={`#${header.id}`}
-          className="block leading-7 text-text-2 hover:text-text-1"
+          className="block leading-7 text-text-2 hover:text-text-1 truncate"
           transition="color duration-300"
           style={{
             paddingLeft: (header.depth - 2) * 12
