@@ -12,5 +12,8 @@ export default defineConfig({
   outDir: 'dist',
   format: ['cjs', 'esm'],
   dts: true,
-  shims: true
+  shims: true,
+  banner: {
+    js: 'import { createRequire } from "module"; const require = createRequire(import.meta.url);'
+  }
 });
