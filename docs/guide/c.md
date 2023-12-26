@@ -1,4 +1,3 @@
-
 # 计算机网络-TCP连接的三次握手
 
 <img src="https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20231112230440.png" alt="test" title="demo"></img>
@@ -29,9 +28,6 @@
 
 ### 3.2 例二
 
-:::tip
-这是一个tip类型的block
-:::
 
 - 客户端的使用 ISN=2000 打开一个连接，服务器端使用 ISN=3000 打开一个连接，经过 3 次握手建立连接。连接建立起来以后，假定客户端向服务器发送一段数据 Welcome the server!（长度 20 Bytes），而服务器的回答数据 Thank you!（长度 10 Bytes ），试画出三次握手和数据传输阶段报文段序列号、确认号的情况。
 
