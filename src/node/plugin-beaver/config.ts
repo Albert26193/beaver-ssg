@@ -3,7 +3,6 @@ import { Plugin } from 'vite';
 import { SiteConfig } from 'shared/types/index';
 import { PACKAGE_ROOT } from '../../node/constants';
 import sirv from 'sirv';
-import { Server } from 'http';
 
 const SITE_DATA_ID = 'beaver:site-data';
 

@@ -28,4 +28,17 @@ cli.command('build [root]', 'build in production').action(async (root: string) =
   }
 });
 
+import { preview } from './preview';
+
+cli
+  .command('preview [root]', 'preview production build')
+  .option('--port <port>', 'port to use for preview server')
+  .action(async (root: string, { port }: { port: number }) => {
+    try {
+      root = resolve(root);
+      await preview(root, { port });
+    } catch (e) {
+      console.log(e);
+    }
+  });
 cli.parse();

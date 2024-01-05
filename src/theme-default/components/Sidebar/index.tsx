@@ -11,6 +11,7 @@ export function Sidebar(props: SidebarProps) {
 
   const renderGroupItem = (item: SidebarItem) => {
     const active = item.link === pathname;
+    // console.log(pathname);
     return (
       <div ml="5">
         <div

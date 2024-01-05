@@ -8,6 +8,8 @@ import { SiteConfig } from 'shared/types';
 import { createVitePlugins } from './vitePlugins';
 import { Route } from './plugin-routes';
 
+const CLIENT_OUTPUT = 'build';
+
 export async function bundle(root: string, config: SiteConfig) {
   const resolveViteConfig = async (isServer: boolean): Promise<InlineConfig> => ({
     mode: 'production',
@@ -19,11 +21,11 @@ export async function bundle(root: string, config: SiteConfig) {
     build: {
       minify: false,
       ssr: isServer,
-      outDir: isServer ? path.join(root, '.temp') : path.join(root, 'build'),
+      outDir: isServer ? path.join(root, '.temp') : path.join(root, CLIENT_OUTPUT),
       rollupOptions: {
         input: isServer ? SERVER_ENTRY_PATH : CLIENT_ENTRY_PATH,
         output: {
-          format: isServer ? 'esm' : 'esm'
+          format: 'esm'
         }
       }
     }
@@ -38,6 +40,10 @@ export async function bundle(root: string, config: SiteConfig) {
       // server build
       viteBuild(await resolveViteConfig(true))
     ]);
+    const publicDir = join(root, 'public');
+    if (fs.pathExistsSync(publicDir)) {
+      await fs.copy(publicDir, join(root, CLIENT_OUTPUT));
+    }
     return [clientBundle, serverBundle] as [RollupOutput, RollupOutput];
   } catch (e) {
     console.log(e);
@@ -52,8 +58,16 @@ export async function renderPage(
 ) {
   console.log('Rendering page in server side...');
   const clientChunk = clientBundle.output.find((chunk) => chunk.type === 'chunk' && chunk.isEntry);
+  const styleAssets = clientBundle.output.filter(
+    (chunk) => chunk.type === 'asset' && chunk.fileName.endsWith('.css')
+  );
   return Promise.all(
-    routes.map(async (route) => {
+    [
+      ...routes,
+      {
+        path: '/404'
+      }
+    ].map(async (route) => {
       const routePath = route.path;
       const appHtml = await render(routePath);
       const html = `
@@ -64,10 +78,11 @@ export async function renderPage(
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>title</title>
     <meta name="description" content="xxx">
+    ${styleAssets.map((item) => `<link rel="stylesheet" href="/${item.fileName}">`).join('\n')}
   </head>
   <body>
     <div id="root">${appHtml}</div>
-    <script type="module" src="./${clientChunk?.fileName}"></script>
+    <script type="module" src="/${clientChunk?.fileName}"></script>
   </body>
 </html>`.trim();
       const fileName = routePath.endsWith('/') ? `${routePath}index.html` : `${routePath}.html`;
