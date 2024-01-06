@@ -93,12 +93,12 @@ export async function renderPage(
 }
 
 export async function build(root: string = process.cwd(), config: SiteConfig) {
-  // 1. bundle - client 端 + server 端
+  // 1. bundle: generate client + server bundles
   const [clientBundle] = await bundle(root, config);
-  // 2. 引入 server-entry 模块
-  const serverEntryPath = join(root, '.temp', 'ssr-entry.js');
+  // 2. put client bundle to build folder
+  const serverEntryPath = join(root, '.temp', 'renderServer.js');
   const { render, routes } = await import(serverEntryPath);
-  // 3. 服务端渲染，产出 HTML
+  // 3. render page
   try {
     await renderPage(render, routes, root, clientBundle);
   } catch (e) {
