@@ -342,7 +342,7 @@
   display: inline-block;
 }
 
-.beaver-doc [class*='language-'] > button.copy {
+.beaver-doc [class*='language-'] > button.copy-code {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -363,24 +363,24 @@
   transition: opacity 0.4s;
 }
 
-.beaver-doc [class*='language-']:hover > button.copy,
-.beaver-doc [class*='language-'] > button.copy:focus {
+.beaver-doc [class*='language-']:hover > button.copy-code,
+.beaver-doc [class*='language-'] > button.copy-code:focus {
   opacity: 1;
 }
 
-.beaver-doc [class*='language-'] > button.copy:hover {
+.beaver-doc [class*='language-'] > button.copy-code:hover {
   background-color: var(--beaver-code-copy-code-hover-bg);
 }
 
-.beaver-doc [class*='language-'] > button.copy.copied,
-.beaver-doc [class*='language-'] > button.copy:hover.copied {
+.beaver-doc [class*='language-'] > button.copy-code.copied,
+.beaver-doc [class*='language-'] > button.copy-code:hover.copied {
   border-radius: 0 4px 4px 0;
   background-color: var(--beaver-code-copy-code-hover-bg);
   background-image: var(--beaver-icon-copied);
 }
 
-.beaver-doc [class*='language-'] > button.copy.copied::before,
-.beaver-doc [class*='language-'] > button.copy:hover.copied::before {
+.beaver-doc [class*='language-'] > button.copy-code.copied::before,
+.beaver-doc [class*='language-'] > button.copy-code:hover.copied::before {
   position: relative;
   left: -65px;
   display: block;
@@ -410,8 +410,8 @@
     opacity 0.4s;
 }
 
-.beaver-doc [class*='language-']:hover > button.copy + span.lang,
-.beaver-doc [class*='language-'] > button.copy:focus + span.lang {
+.beaver-doc [class*='language-']:hover > button.copy-code + span.lang,
+.beaver-doc [class*='language-'] > button.copy-code:focus + span.lang {
   opacity: 0;
 }
 

@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client';
 import { App, initPageData } from './app';
 import { BrowserRouter } from 'react-router-dom';
 import { DataContext } from './hooks';
+import { setupCopy } from '../theme-default/logic';
 
 async function renderInBrowser() {
   const containerEl = document.getElementById('root');
@@ -19,4 +20,8 @@ async function renderInBrowser() {
   );
 }
 
-renderInBrowser();
+renderInBrowser().then(() => {
+  setTimeout(() => {
+    setupCopy();
+  });
+});

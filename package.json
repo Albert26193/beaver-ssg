@@ -64,6 +64,7 @@
     "acorn": "^8.10.0",
     "cac": "^6.7.14",
     "compression": "^1.7.4",
+    "copy-to-clipboard": "^3.3.3",
     "fast-glob": "^3.3.1",
     "fs-extra": "^11.1.1",
     "github-slugger": "^2.0.0",

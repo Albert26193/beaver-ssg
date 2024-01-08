@@ -1,0 +1,1 @@
+export { setupCopy } from './codeCopy';

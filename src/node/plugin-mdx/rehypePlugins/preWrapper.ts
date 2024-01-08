@@ -43,6 +43,19 @@ export const rehypePluginPreWrapper: Plugin<[], Root> = () => {
         node.children = [
           {
             type: 'element',
+            tagName: 'button',
+            properties: {
+              className: 'copy-code'
+            },
+            children: [
+              {
+                type: 'text',
+                value: ''
+              }
+            ]
+          },
+          {
+            type: 'element',
             tagName: 'span',
             properties: {
               className: 'lang'
