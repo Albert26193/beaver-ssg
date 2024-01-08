@@ -414,3 +414,33 @@
 .beaver-doc [class*='language-'] > button.copy:focus + span.lang {
   opacity: 0;
 }
+
+/**
+ * Medias
+ * -------------------------------------------------------------------------- */
+/* image */
+.beaver-doc img {
+  max-width: 800px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.beaver-doc img[alt*='|xs'] {
+  width: 300px;
+}
+
+.beaver-doc img[alt*='|s'] {
+  width: 400px;
+}
+
+.beaver-doc img[alt*='|m'] {
+  width: 500px;
+}
+
+.beaver-doc img[alt*='|l'] {
+  width: 600px;
+}
+
+.beaver-doc img[alt*='|xl'] {
+  width: 800px;
+}
