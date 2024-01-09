@@ -3,11 +3,11 @@ import { describe, test, expect } from 'vitest';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
-import { rehypePluginPreWrapper } from '../plugin-mdx/rehypePlugins/preWrapper';
-import { rehypePluginShiki } from '../../node/plugin-mdx/rehypePlugins/shiki';
+import { rehypePluginPreWrapper } from '../plugin-markdown/rehypePlugins/preWrapper';
+import { rehypePluginShiki } from '../plugin-markdown/rehypePlugins/shiki';
 import shiki from 'shiki';
 import remarkMdx from 'remark-mdx';
-import { remarkPluginToc } from '../plugin-mdx/remarkPlugins/toc';
+import { remarkPluginToc } from '../plugin-markdown/remarkPlugins/toc';
 import remarkStringify from 'remark-stringify';
 
 describe('Markdown compile cases', async () => {
