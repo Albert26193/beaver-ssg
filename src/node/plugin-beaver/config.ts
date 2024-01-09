@@ -36,7 +36,7 @@ export function pluginConfig(config: SiteConfig, restartServer?: () => Promise<v
       }
     },
     configureServer(server) {
-      const publicDir = join(config.root, 'public');
+      const publicDir = join(config.root, 'markdown/public');
       server.middlewares.use(sirv(publicDir));
     },
 

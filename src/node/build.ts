@@ -40,7 +40,7 @@ export async function bundle(root: string, config: SiteConfig) {
       // server build
       viteBuild(await resolveViteConfig(true))
     ]);
-    const publicDir = join(root, 'public');
+    const publicDir = join(root, 'markdown/public');
     if (fs.pathExistsSync(publicDir)) {
       await fs.copy(publicDir, join(root, CLIENT_OUTPUT));
     }

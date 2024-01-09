@@ -1,5 +1,5 @@
 // docs/config.ts
-import { defineConfig } from '../dist';
+import { defineConfig } from '../../dist';
 
 export default defineConfig({
   title: "xxx",
@@ -24,7 +24,7 @@ export default defineConfig({
             {
               text: '如何使用',
               link: '/guide/c'
-            }
+            },
           ]
         }
       ]

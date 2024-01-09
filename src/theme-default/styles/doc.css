@@ -422,7 +422,7 @@
 .beaver-doc img {
   max-width: 800px;
   object-fit: contain;
-  margin: 0 auto;
+  margin: 6px auto;
 }
 
 .beaver-doc img[alt*='|xs'] {

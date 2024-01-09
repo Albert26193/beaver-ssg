@@ -1,7 +1,5 @@
 # 计算机网络-TCP连接的三次握手
 
-![image.png|xl](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20240108213834.png)
-![image.png|s](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20240108214350.png)
 ![image.png|xs](/beaver.png#30)
 ![image.png|s](/beaver.png#30)
 ![image.png|m](/beaver.png#30)

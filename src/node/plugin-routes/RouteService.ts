@@ -11,7 +11,7 @@ export class RouteService {
   #scanDir: string;
   #routeData: RouteMeta[] = [];
   constructor(scanDir: string) {
-    this.#scanDir = scanDir;
+    this.#scanDir = `${scanDir}/markdown`;
   }
 
   async init() {
