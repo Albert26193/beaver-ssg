@@ -2,6 +2,7 @@ import cac from 'cac';
 import { resolve } from 'path';
 import { build } from './build';
 import { resolveConfig } from './config';
+import { generateConfig } from './configGenerate';
 
 const cli = cac('beaver').version('0.0.1').help();
 
@@ -16,6 +17,7 @@ cli.command('dev [root]', 'start dev server').action(async (root: string) => {
     server.printUrls();
   };
   await createServer();
+  await generateConfig(root);
 });
 
 cli.command('build [root]', 'build in production').action(async (root: string) => {
@@ -26,6 +28,7 @@ cli.command('build [root]', 'build in production').action(async (root: string) =
   } catch (e) {
     console.log(e);
   }
+  await generateConfig(root);
 });
 
 import { preview } from './preview';
