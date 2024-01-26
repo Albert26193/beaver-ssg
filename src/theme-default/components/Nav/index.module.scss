@@ -1,7 +1,21 @@
-.nav {
-  padding-left: max(32px, calc(32px + (100vw - var(--beaver-layout-max-width)) / 2));
-  padding-right: max(32px, calc(32px + (100vw - var(--beaver-layout-max-width)) / 2));
+.header {
   background-color: var(--beaver-c-bg);
+  border-bottom: 1px solid var(--beaver-c-divider-light);
+}
+
+.nav {
+  box-sizing: border-box;
+}
+
+.titleBlock {
+  padding-left: var(--beaver-layout-offset-x);
+  padding-right: var(--beaver-layout-padding-x);
+  width: var(--beaver-sidebar-width);
+  box-sizing: content-box;
+}
+
+.menu {
+  padding-right: var(--beaver-layout-offset-x);
 }
 
 .link:hover {
@@ -22,5 +36,18 @@
   color: var(--beaver-c-text-2);
   &:hover {
     color: var(--beaver-c-text-1);
+  }
+}
+
+.headerDoc {
+  background-color: var(--beaver-c-bg-alt);
+  border-bottom: none;
+
+  .title {
+    border-bottom: 1px solid var(--beaver-c-divider-light);
+  }
+
+  .menu {
+    border-bottom: 1px solid var(--beaver-c-divider-light);
   }
 }

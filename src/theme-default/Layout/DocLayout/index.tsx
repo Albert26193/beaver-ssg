@@ -4,6 +4,7 @@ import { Sidebar } from '../../components/Sidebar/index';
 import styles from './index.module.scss';
 import { DocFooter } from '../../components/DocFooter/index';
 import { Aside } from '../../components/Aside/index';
+import classnames from 'classnames';
 
 export function DocLayout() {
   const { siteData, toc } = usePageData();
@@ -23,10 +24,7 @@ export function DocLayout() {
         sidebarData={matchedSidebar}
         pathname={pathname}
       />
-      <div
-        className={styles.content}
-        flex="~"
-      >
+      <div className={styles.content}>
         <div className={styles.docContent}>
           <div className="beaver-doc break-words">
             <Content />

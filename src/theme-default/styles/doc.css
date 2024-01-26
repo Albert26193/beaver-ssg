@@ -420,7 +420,7 @@
  * -------------------------------------------------------------------------- */
 /* image */
 .beaver-doc img {
-  max-width: 800px;
+  /* max-width: 800px; */
   object-fit: contain;
   margin: 6px auto;
 }

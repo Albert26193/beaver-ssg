@@ -22,7 +22,7 @@ export function Layout() {
   };
   return (
     <div>
-      <Nav />
+      <Nav pageType={pageType} />
       <section
         style={{
           paddingTop: 'var(--beaver-nav-height)'

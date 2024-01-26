@@ -158,7 +158,43 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --beaver-layout-max-width: 1800px;
+  --beaver-layout-max-width: 700px;
+  --beaver-layout-padding-x: 32px;
+  --beaver-layout-offset-x: max(var(--beaver-layout-padding-x), calc(50vw - var(--beaver-layout-max-width) / 2 + var(--beaver-layout-padding-x)));
+  --beaver-content-padding-left: calc(var(--beaver-layout-offset-x) + var(--beaver-layout-padding-x) * 2);
+  --beaver-content-padding-right: calc(var(--beaver-layout-offset-x) + var(--beaver-layout-padding-x));
+  --beaver-doc-content-width: calc(100vw - var(--beaver-aside-width) - var(--beaver-content-padding-left) - var(--beaver-content-padding-right));
+}
+
+@media (min-width: 960px) {
+  :root {
+    --beaver-layout-max-width: 960px;
+    --beaver-content-padding-left: calc(var(--beaver-aside-width) + var(--beaver-layout-offset-x) + var(--beaver-layout-padding-x) * 2);
+  }
+}
+
+@media (min-width: 1080px) {
+  :root {
+    --beaver-layout-max-width: 1080px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --beaver-layout-max-width: 1280px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --beaver-layout-max-width: 1360px;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --beaver-layout-max-width: 1440px;
+  }
 }
 
 /**

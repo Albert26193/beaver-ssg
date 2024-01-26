@@ -1,7 +1,17 @@
 import styles from './index.module.scss';
-import { NavItemWithLink } from 'shared/types';
+import { NavItemWithLink, PageType } from 'shared/types';
 import { usePageData } from '@runtime';
 import { SwitchAppearance } from '../SwitchAppearance';
+import classnames from 'classnames';
+
+type IProps = {
+  pageType?: 'default' | PageType;
+};
+
+const pageTypes = {
+  default: '',
+  doc: styles.headerDoc
+};
 
 export function MenuItem(item: NavItemWithLink) {
   return (
@@ -16,34 +26,53 @@ export function MenuItem(item: NavItemWithLink) {
   );
 }
 
-export function Nav() {
+export function Nav(props?: IProps) {
   const { siteData } = usePageData();
   const nav = siteData.themeConfig.nav || [];
+  const pageTypeClassname = pageTypes[props.pageType] ?? 'default';
+
   return (
     <header
       fixed="~"
       pos="t-0 l-0"
       w="full"
       z="10"
+      className={classnames(styles.header, pageTypeClassname)}
     >
       <div
         flex="~"
         items="center"
         justify="between"
-        className={`h-14 divider-bottom ${styles.nav}`}
+        className={classnames(styles.nav, 'h-14')}
       >
-        <div>
+        <div
+          className={classnames(
+            'h-full',
+            'flex',
+            'items-center',
+            'justify-center',
+            styles.titleBlock
+          )}
+        >
           <a
             href="/"
             hover="opacity-60"
-            className="w-full h-full text-1rem font-semibold flex items-center"
+            className={classnames(
+              styles.title,
+              'flex',
+              'items-center',
+              'w-full',
+              'h-full',
+              'text-1rem',
+              'font-semibold'
+            )}
           >
             beaver.js
           </a>
         </div>
         <div
           flex="~"
-          className="mr-4"
+          className={classnames(styles.menu, 'h-full', 'flex-1', 'items-center', 'justify-right')}
         >
           {/* 普通菜单 */}
           <div

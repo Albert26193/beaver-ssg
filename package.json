@@ -63,6 +63,7 @@
     "@vitejs/plugin-react": "^4.1.0",
     "acorn": "^8.10.0",
     "cac": "^6.7.14",
+    "classnames": "^2.5.1",
     "compression": "^1.7.4",
     "copy-to-clipboard": "^3.3.3",
     "fast-glob": "^3.3.1",
