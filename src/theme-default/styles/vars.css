@@ -193,7 +193,7 @@
 
 @media (min-width: 1920px) {
   :root {
-    --beaver-layout-max-width: 1440px;
+    --beaver-layout-max-width: 1620px;
   }
 }
 
@@ -240,7 +240,6 @@
   --beaver-z-index-backdrop: 40;
   --beaver-z-index-sidebar: 50;
   --beaver-z-index-footer: 60;
-  --beaver-aside-width: 268px;
 }
 
 /**
@@ -356,13 +355,68 @@
 }
 
 /**
+ * Component: Aside
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --beaver-aside-width: 140px;
+}
+
+@media (min-width: 1080px) {
+  :root {
+    --beaver-aside-width: 140px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --beaver-aside-width: 160px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --beaver-aside-width: 180px;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --beaver-aside-width: 240px;
+  }
+}
+
+/**
  * Component: Sidebar
  * -------------------------------------------------------------------------- */
 
 :root {
-  --beaver-sidebar-width: 240px;
+    --beaver-sidebar-width: 140px;
 }
 
+@media (min-width: 1080px) {
+  :root {
+    --beaver-sidebar-width: 140px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --beaver-sidebar-width: 160px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --beaver-sidebar-width: 180px;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --beaver-sidebar-width: 240px;
+  }
+}
 /**
  * Component: Home
  * -------------------------------------------------------------------------- */

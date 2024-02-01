@@ -71,6 +71,9 @@ export const rehypePluginShiki: Plugin<[Options], Root> = ({ highlighter }) => {
 
 ```
 
+$latex$
+$$\frac{n!}{k!(n-k)!} = \binom{n}{k}$$
+
 ```html
 <head></head>
 ```

@@ -14,15 +14,15 @@ export default defineConfig({
           items: [
             {
               text: 'a',
-              link: 'guide/a'
+              link: '/guide/a'
             },
             {
               text: 'b',
-              link: 'guide/b'
+              link: '/guide/b'
             },
             {
               text: 'c',
-              link: 'guide/c'
+              link: '/guide/c'
             },
             {
               text: 'd',

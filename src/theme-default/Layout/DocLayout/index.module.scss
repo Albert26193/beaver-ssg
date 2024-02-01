@@ -6,11 +6,13 @@
 }
 
 .contentInner {
+  padding: 0 24px;
 }
 
 .docContent {
   width: var(--beaver-doc-content-width);
   padding-right: var(--beaver-layout-padding-x);
+  padding: 20px 56px 80px;
 }
 
 .asideContainer {
