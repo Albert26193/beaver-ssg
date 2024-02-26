@@ -8,7 +8,6 @@ export function usePrevNextPage() {
   const sidebar = siteData.themeConfig?.sidebar || {};
   const flattenTitles: SidebarItem[] = [];
 
-  // 遍历 Sidebar 数据，收集所有的文章信息，并平铺到一个数组里面
   Object.keys(sidebar).forEach((key) => {
     const groups = sidebar[key] || [];
     groups.forEach((group) => {

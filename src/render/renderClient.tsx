@@ -3,20 +3,24 @@ import { App, initPageData } from './app';
 import { BrowserRouter } from 'react-router-dom';
 import { DataContext } from './hooks';
 import { setupCopy } from '../theme/logic';
+import { HelmetProvider } from 'react-helmet-async';
 
 async function renderInBrowser() {
   const containerEl = document.getElementById('root');
   if (!containerEl) {
     throw new Error('#root element not found');
   }
-  // 初始化 PageData
+
   const pageData = await initPageData(location.pathname);
+
   createRoot(containerEl).render(
-    <DataContext.Provider value={pageData}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </DataContext.Provider>
+    <HelmetProvider>
+      <DataContext.Provider value={pageData}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </DataContext.Provider>
+    </HelmetProvider>
   );
 }
 

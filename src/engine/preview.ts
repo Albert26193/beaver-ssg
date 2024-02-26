@@ -14,7 +14,6 @@ export async function preview(root: string, { port }: { port?: number }) {
   const notFoundPage = fs.readFileSync(path.resolve(outputDir, '404.html'), 'utf-8');
   const compress = compression();
 
-  // 静态资源服务
   const serve = sirv(outputDir, {
     etag: true,
     maxAge: 31536000,

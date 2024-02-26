@@ -7,10 +7,11 @@ import 'uno.css';
 import { HomeLayout } from './HomeLayout/index';
 import { DocLayout } from './DocLayout';
 import { NotFoundLayout } from './NotFoundLayout';
+import { Helmet } from 'react-helmet-async';
 
 export function Layout() {
   const pageData = usePageData();
-  const { pageType } = pageData;
+  const { pageType, title } = pageData;
   const getContent = () => {
     if (pageType === 'home') {
       return <HomeLayout />;
@@ -22,6 +23,9 @@ export function Layout() {
   };
   return (
     <div>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
       <Nav pageType={pageType} />
       <section
         style={{

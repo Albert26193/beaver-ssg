@@ -65,6 +65,7 @@ export interface PageData {
   frontmatter: FrontMatter;
   pageType: PageType;
   toc?: Header[];
+  title: string;
 }
 
 export interface PageModule {
@@ -72,6 +73,7 @@ export interface PageModule {
   frontmatter?: FrontMatter;
   toc?: Header[];
   [key: string]: unknown;
+  title: string;
 }
 
 export interface Feature {

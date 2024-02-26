@@ -7,7 +7,7 @@ import fs from 'fs-extra';
 import { SiteConfig } from 'types';
 import { createVitePlugins } from './vitePlugins';
 import { Route } from './plugin-routes';
-
+import { HelmetData } from 'react-helmet-async';
 const CLIENT_OUTPUT = 'build';
 
 export async function bundle(root: string, config: SiteConfig) {
@@ -16,7 +16,7 @@ export async function bundle(root: string, config: SiteConfig) {
     root,
     plugins: await createVitePlugins(config, undefined, isServer),
     ssr: {
-      noExternal: ['react-router-dom', 'loadsh-es']
+      noExternal: ['react-router-dom', 'loadsh-es', 'react-helmet-async']
     },
     build: {
       minify: false,
@@ -26,6 +26,11 @@ export async function bundle(root: string, config: SiteConfig) {
         input: isServer ? SERVER_ENTRY_PATH : CLIENT_ENTRY_PATH,
         output: {
           format: 'esm'
+        },
+        onwarn(warning, warn) {
+          if (warning.message.includes('dynamically imported')) {
+            return;
+          }
         }
       }
     }
@@ -51,7 +56,7 @@ export async function bundle(root: string, config: SiteConfig) {
 }
 
 export async function renderPage(
-  render: (url: string) => string,
+  render: (url: string, helmetContext: object) => string,
   routes: Route[],
   root: string,
   clientBundle: RollupOutput
@@ -68,15 +73,22 @@ export async function renderPage(
         path: '/404'
       }
     ].map(async (route) => {
+      const helmetContext = {
+        context: {}
+      } as HelmetData;
       const routePath = route.path;
-      const appHtml = await render(routePath);
+      const appHtml = await render(routePath, helmetContext);
+      const { helmet } = helmetContext.context;
       const html = `
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>title</title>
+    ${helmet?.title?.toString() || ''}
+    ${helmet?.meta?.toString() || ''}
+    ${helmet?.link?.toString() || ''}
+    ${helmet?.style?.toString() || ''}
     <meta name="description" content="xxx">
     ${styleAssets.map((item) => `<link rel="stylesheet" href="/${item.fileName}">`).join('\n')}
   </head>

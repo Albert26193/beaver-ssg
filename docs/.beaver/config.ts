@@ -5,67 +5,29 @@ export default defineConfig({
   title: "xxx",
   themeConfig: {
     nav: [
-      { text: "Homepage", link: "/" },
+      { text: "主页", link: "/" },
+      { text: "指南", link: "/guide/" },
     ],
     sidebar: {
       '/guide/': [
         {
-          text: 'guide',
+          text: '教程',
           items: [
             {
-              text: 'a8888',
-              link: '/guide/'
+              text: '快速上手',
+              link: '/guide/a'
             },
             {
-              text: 'b',
+              text: '如何安装',
               link: '/guide/b'
             },
             {
-              text: 'c',
+              text: '如何使用',
               link: '/guide/c'
             },
-            {
-              text: 'd',
-              link: 'guide/demo/d'
-            },
-            {
-              text: 'e',
-              link: 'guide/demo/demo2/e'
-            },
-            {
-              text: 'm',
-              link: 'guide/m'
-            },
-            {
-              text: 'd',
-              link: 'guide/demo/d'
-            },
-            {
-              text: 'e',
-              link: 'guide/demo/demo2/e'
-            },
-            {
-              text: 'e',
-              link: 'guide/demo/demo2/e'
-            },
           ]
         }
-      ],
-      '/new/': [
-        {
-          text: 'new',
-          items: [
-            {
-              text: '1',
-              link: 'new/1'
-            },
-            {
-              text: '2',
-              link: 'new/2'
-            },
-          ]
-        }
-      ],
+      ]
     }
   },
 });
