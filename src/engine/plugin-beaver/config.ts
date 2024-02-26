@@ -3,6 +3,7 @@ import { Plugin } from 'vite';
 import { SiteConfig } from 'types/index';
 import { PACKAGE_ROOT } from '../../engine/constants';
 import sirv from 'sirv';
+import fs from 'fs-extra';
 
 const SITE_DATA_ID = 'beaver:site-data';
 
@@ -37,7 +38,9 @@ export function pluginConfig(config: SiteConfig, restartServer?: () => Promise<v
     },
     configureServer(server) {
       const publicDir = join(config.root, 'markdown/public');
-      server.middlewares.use(sirv(publicDir));
+      if (fs.existsSync(publicDir)) {
+        server.middlewares.use(sirv(publicDir));
+      }
     },
 
     async handleHotUpdate(ctx) {
