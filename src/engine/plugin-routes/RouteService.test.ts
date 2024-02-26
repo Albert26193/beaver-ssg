@@ -3,7 +3,7 @@ import { describe, expect, test } from 'vitest';
 import path from 'path';
 
 describe('RouteService', async () => {
-  const testDir = path.join(__dirname, 'fixtures');
+  const testDir = path.join(__dirname, 'demo');
   const routeService = new RouteService(testDir);
   await routeService.init();
 
@@ -15,11 +15,11 @@ describe('RouteService', async () => {
     expect(routeMeta).toMatchInlineSnapshot(`
       [
         {
-          "absolutePath": "TEST_DIR/a.mdx",
+          "absolutePath": "TEST_DIR/markdown/a.mdx",
           "routePath": "/a",
         },
         {
-          "absolutePath": "TEST_DIR/guide/b.mdx",
+          "absolutePath": "TEST_DIR/markdown/guide/b.mdx",
           "routePath": "/guide/b",
         },
       ]

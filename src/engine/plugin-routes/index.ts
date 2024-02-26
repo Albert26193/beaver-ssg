@@ -1,7 +1,6 @@
 import { Plugin } from 'vite';
 import { RouteService } from './RouteService';
 import { PageModule } from '../../types';
-// 本质: 把文件目录结构 -> 路由数据
 
 export interface Route {
   path: string;
