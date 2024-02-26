@@ -13,8 +13,8 @@ export default defineConfig({
           text: 'guide',
           items: [
             {
-              text: 'a',
-              link: '/guide/a'
+              text: 'a8888',
+              link: '/guide/'
             },
             {
               text: 'b',

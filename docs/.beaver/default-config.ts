@@ -2,7 +2,7 @@
 import { defineConfig } from '../../dist';
 
 export default defineConfig({
-  title: "xxx",
+  title: "beaver-doc",
   themeConfig: {
     nav: [
       { text: "Homepage", link: "/" },

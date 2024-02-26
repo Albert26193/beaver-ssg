@@ -1,5 +1,6 @@
 # 计算机网络-TCP连接的三次握手
 
+- hot update 
 ![image.png|xs](/beaver.png#30)
 ![image.png|s](/beaver.png#30)
 ![image.png|m](/beaver.png#30)

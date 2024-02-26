@@ -2,9 +2,9 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig({
   entryPoints: {
-    cli: './src/node/cli.ts',
-    index: './src/node/index.ts',
-    dev: './src/node/dev.ts'
+    cli: './src/engine/cli.ts',
+    index: './src/engine/index.ts',
+    dev: './src/engine/dev.ts'
   },
   bundle: true,
   splitting: true,
