@@ -1,6 +1,6 @@
 {
   "name": "beaver-ssg",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a modern ssg tool",
   "main": "index.js",
   "type": "module",

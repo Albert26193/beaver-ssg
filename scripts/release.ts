@@ -84,7 +84,7 @@ async function main() {
   // 6.  release commit
   step('\nCommitting changes...');
   await run('git', ['add', '-A']);
-  await run('git', ['commit', '-m', `'release(ssg): v${targetVersion}' released`]);
+  await run('git', ['commit', '-m', `chore(release): v${targetVersion}`]);
 
   // 7. npm publish
   step('\nPublishing packages...');
