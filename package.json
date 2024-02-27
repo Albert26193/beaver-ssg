@@ -1,7 +1,7 @@
 {
   "name": "beaver-ssg",
   "version": "0.1.2",
-  "description": "a modern ssg tool",
+  "description": "a modern SSG tool to generate static sites with MarkDown",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "type": "module",
