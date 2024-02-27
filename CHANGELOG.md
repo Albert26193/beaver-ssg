@@ -1,3 +1,12 @@
+## [0.1.3](https://github.com/Albert26193/beaver-ssg/compare/v0.1.2...v0.1.3) (2024-02-27)
+
+
+### Bug Fixes
+
+* fix dependency error ([a8df93f](https://github.com/Albert26193/beaver-ssg/commit/a8df93f1ec91351567d7a22f4297009298595d61))
+
+
+
 ## [0.1.2](https://github.com/Albert26193/beaver-ssg/compare/v0.1.1...v0.1.2) (2024-02-27)
 
 
