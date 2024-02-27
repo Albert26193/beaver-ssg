@@ -1,3 +1,12 @@
+## [0.1.2](https://github.com/Albert26193/beaver-ssg/compare/v0.1.1...v0.1.2) (2024-02-27)
+
+
+### Bug Fixes
+
+* fix package error ([b09780b](https://github.com/Albert26193/beaver-ssg/commit/b09780b790dac5be62ae1857da3dad346620da1b))
+
+
+
 ## 0.1.1 (2024-02-26)
 
 
