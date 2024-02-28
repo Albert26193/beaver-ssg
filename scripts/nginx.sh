@@ -3,7 +3,7 @@
 function buildBlog() {
     # 获取 Git 项目根目录和构建输出目录
     local gitPath="$(git rev-parse --show-toplevel)"
-    local distPath="${gitPath}/.beaver/build"
+    local distPath="${gitPath}/docs/build"
 
     # 目标服务器和路径配置
     local targetPath="/opt/beaver-ssg"

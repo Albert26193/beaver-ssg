@@ -96,7 +96,7 @@ export function Nav(props?: IProps) {
             className={styles.socialLinkIcon}
             ml="2"
           >
-            <a href="https://www.github.com">
+            <a href="https://www.github.com/Albert26193/beaver-ssg">
               <div className="i-carbon-logo-github w-5 h-5 fill-current"></div>
             </a>
           </div>
