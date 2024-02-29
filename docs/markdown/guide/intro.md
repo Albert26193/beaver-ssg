@@ -6,9 +6,10 @@
 - 更加推荐使用 [pnpm](https://pnpm.js.org/) 作为包管理器。
 
 ```bash
-# 创建目录，将 [demo] 替换成你的项目名称
-git clone https://github.com/Albert26193/beaver-ssg.git [demo] &&
-cd [demo] 
+# 创建目录
+git clone https://github.com/Albert26193/beaver-ssg.git && 
+cd beaver-ssg
+
 
 # 安装依赖，推荐使用 pnpm
 pnpm install

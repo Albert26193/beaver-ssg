@@ -3,4 +3,5 @@ node_modules
 build
 docs/build
 docs/.temp
-**/*.tar.gz
+
+**/*.tgz

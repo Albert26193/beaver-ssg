@@ -25,13 +25,8 @@
   ],
   "author": "albert26193",
   "license": "MIT",
-  "file": [
-    "dist",
-    "bin",
-    "README.md",
-    "src/render",
-    "src/theme",
-    "src/types"
+  "files": [
+    "src/*"
   ],
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
