@@ -16,7 +16,30 @@ console.log('hello world');
 ## `Markdown` 支持
 
 - 按照主流的 `GitHub Flavored Markdown` 规范编写 `Markdown` 文件。
-- 支持多级标题、列表、表格、代码块、图片、链接等功能。
+
+### `Markdown` 基本语法
+
+- **加粗显示**
+- *斜体显示*
+- ***加粗斜体显示***
+- ~~删除线~~
+- [链接](https://github.com)
+
+### 代码
+
+- `行内代码 inline code`
+
+```javascript
+const demo = "hello world"
+console.log(demo)
+```
+
+### 表格
+
+| 标题1 | 标题2 | 标题3 |
+|-------|:-----:|------:|
+| 单元格1 | 单元格2 | 单元格3 |
+| 单元格4 | 单元格5 | 单元格6 |
 
 ## 约定式路由
 
